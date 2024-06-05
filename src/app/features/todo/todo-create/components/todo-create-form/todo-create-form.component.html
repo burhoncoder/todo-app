@@ -1,0 +1,18 @@
+<form [formGroup]="todoCreateForm" (ngSubmit)="handleCreateTodo()">
+
+  <app-input
+    label="Title"
+    placeholder="Enter title"
+    outerClass="mb-4"
+    formControlName="title"
+    [errorMessage]="todoCreateForm.get('title')?.errors?.['required'] && todoCreateForm.get('title')?.touched && 'Required'"
+  />
+
+  <app-checkbox
+    label="Completed"
+    outerClass="mb-6"
+    formControlName="completed"
+  />
+
+  <app-button type="submit" [isLoading]="loader.isLoading">Create</app-button>
+</form>

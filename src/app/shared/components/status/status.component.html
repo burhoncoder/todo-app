@@ -1,0 +1,9 @@
+<div
+  [ngClass]="{
+    status: true,
+    status_completed: completed,
+    status_incompleted: !completed
+  }"
+>
+  {{ completed ? 'Completed' : 'Incomplete' }}
+</div>

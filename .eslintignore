@@ -1,0 +1,16 @@
+# Ignore built files
+/dist/
+/out-tsc/
+
+# Ignore node_modules except if you have ESLint plugins installed within it
+/node_modules/
+
+# Ignore generated files by Angular CLI
+/.angular/
+
+# Ignore configuration files
+/angular.json
+/tsconfig.json
+
+# Ignore test files if not needed for linting
+/*.spec.ts

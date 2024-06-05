@@ -1,0 +1,32 @@
+@import './fonts.scss';
+@import './normalize.scss';
+
+.container {
+  max-width: 1200px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.box {
+  padding: 24px;
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 32px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.mb-4 {
+  margin-bottom: 16px;
+}
+
+.mb-6 {
+  margin-bottom: 24px;
+}

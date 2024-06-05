@@ -1,0 +1,13 @@
+<div class="todo-card">
+  <div class="todo-card__head">
+    <h4 class="todo-card__title">{{ todo.title }}</h4>
+
+    <app-status [completed]="todo.completed"/>
+  </div>
+
+  <div class="todo-card__actions">
+    <app-link [link]="'/todos/single/' + todo.id">View</app-link>
+    <app-button btnType="danger" (btnClick)="handleDeleteTodo()">Delete</app-button>
+    <app-link [link]="'/todos/update/' + todo.id">Update</app-link>
+  </div>
+</div>

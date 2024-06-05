@@ -1,0 +1,22 @@
+@if (todoUpdateForm) {
+  <form [formGroup]="todoUpdateForm" (ngSubmit)="handleUpdateTodo()">
+
+    <app-input
+      label="Title"
+      placeholder="Enter title"
+      outerClass="mb-4"
+      formControlName="title"
+      [errorMessage]="todoUpdateForm.get('title')?.errors?.['required'] && todoUpdateForm.get('title')?.touched && 'Required'"
+    />
+
+    <app-checkbox
+      label="Completed"
+      outerClass="mb-6"
+      formControlName="completed"
+    />
+
+    <app-button type="submit" [isLoading]="loader.isLoading">Update</app-button>
+  </form>
+} @else {
+  <app-loader />
+}

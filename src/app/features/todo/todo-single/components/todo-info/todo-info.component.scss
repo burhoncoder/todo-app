@@ -1,0 +1,13 @@
+:host {
+  width: 100%;
+}
+
+.todo-info {
+  width: 100%;
+
+  &__title {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+}

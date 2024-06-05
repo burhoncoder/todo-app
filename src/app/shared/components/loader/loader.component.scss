@@ -1,0 +1,32 @@
+:host {
+  width: 100%;
+}
+
+.loader {
+  padding: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__spinner {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 100%;
+    border: 8px solid #1577ea;
+    border-top-color: rgba(21, 119, 234, 0.5);
+
+    animation: loading 1s linear infinite;
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

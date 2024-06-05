@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="todos__head">
+    <h2 class="title">Todos list</h2>
+
+    <app-link link="/todos/create">Create</app-link>
+  </div>
+
+    @if (loader.isLoading) {
+      <app-loader/>
+    } @else {
+      <div class="todos__grid">
+        @for (todo of todos; track todo.id) {
+          <app-todo-card [todo]="todo" (deleteTodo)="handleDeleteTodo($event)"/>
+        } @empty {
+          <div class="todos__empty">
+            Empty List
+          </div>
+        }
+      </div>
+    }
+</div>

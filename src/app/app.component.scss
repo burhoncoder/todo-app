@@ -1,0 +1,27 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #d3dae0;
+
+  &__content {
+    flex-grow: 1;
+    padding: 32px;
+  }
+}
+
+.header {
+  background: #fff;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+
+  &__title {
+    font-weight: 600;
+    font-size: 28px;
+  }
+}

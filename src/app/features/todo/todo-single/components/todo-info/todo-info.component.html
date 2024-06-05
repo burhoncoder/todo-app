@@ -1,0 +1,13 @@
+<div class="todo-info">
+  @if (loader.isLoading) {
+    <app-loader />
+  }
+  @else if(!todo) {
+    <h3 class="todo-info__title">Todo with given id not found</h3>
+  }
+  @else {
+    <h3 class="todo-info__title">{{todo.title}}</h3>
+
+    <app-status [completed]="todo.completed" />
+  }
+</div>

@@ -1,0 +1,20 @@
+<form [formGroup]="signInForm" (ngSubmit)="handleSignIn()">
+
+  <app-input
+    label="Email"
+    placeholder="Enter email"
+    outerClass="mb-4"
+    formControlName="email"
+    [errorMessage]="formUtilities.getErrorMessage(signInForm, 'email')"
+  />
+
+  <app-input
+    label="Password"
+    placeholder="Enter password"
+    outerClass="mb-6"
+    formControlName="password"
+    [errorMessage]="formUtilities.getErrorMessage(signInForm, 'password')"
+  />
+
+  <app-button type="submit" [isLoading]="loader.isLoading">Sign in</app-button>
+</form>
